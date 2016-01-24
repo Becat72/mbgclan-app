@@ -12,7 +12,11 @@
 		B89FC2551C42B92D001ECB6E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FC2541C42B92D001ECB6E /* SecondViewController.swift */; };
 		B89FC2581C42B92D001ECB6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89FC2561C42B92D001ECB6E /* Main.storyboard */; };
 		B89FC25A1C42B92D001ECB6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89FC2591C42B92D001ECB6E /* Assets.xcassets */; };
-		B89FC25D1C42B92D001ECB6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89FC25B1C42B92D001ECB6E /* LaunchScreen.storyboard */; };
+		B89FC2671C42D440001ECB6E /* mbgclan_banner.png in Resources */ = {isa = PBXBuildFile; fileRef = B89FC2661C42D440001ECB6E /* mbgclan_banner.png */; };
+		B8D8C50F1C5439F70072BB55 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D8C50E1C5439F70072BB55 /* ThirdViewController.swift */; };
+		B8D8C5191C54474D0072BB55 /* pscrossicon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8D8C5161C54474D0072BB55 /* pscrossicon.jpg */; };
+		B8D8C51A1C54474D0072BB55 /* pstriangleicon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8D8C5171C54474D0072BB55 /* pstriangleicon.jpg */; };
+		B8D8C51B1C54474D0072BB55 /* pscircleicon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8D8C5181C54474D0072BB55 /* pscircleicon.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +26,12 @@
 		B89FC2541C42B92D001ECB6E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B89FC2571C42B92D001ECB6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B89FC2591C42B92D001ECB6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B89FC25C1C42B92D001ECB6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B89FC25E1C42B92D001ECB6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B89FC2661C42D440001ECB6E /* mbgclan_banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mbgclan_banner.png; sourceTree = "<group>"; };
+		B8D8C50E1C5439F70072BB55 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		B8D8C5161C54474D0072BB55 /* pscrossicon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pscrossicon.jpg; sourceTree = "<group>"; };
+		B8D8C5171C54474D0072BB55 /* pstriangleicon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pstriangleicon.jpg; sourceTree = "<group>"; };
+		B8D8C5181C54474D0072BB55 /* pscircleicon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pscircleicon.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,10 @@
 		B89FC2441C42B92D001ECB6E = {
 			isa = PBXGroup;
 			children = (
+				B8D8C5161C54474D0072BB55 /* pscrossicon.jpg */,
+				B8D8C5171C54474D0072BB55 /* pstriangleicon.jpg */,
+				B8D8C5181C54474D0072BB55 /* pscircleicon.jpg */,
+				B89FC2661C42D440001ECB6E /* mbgclan_banner.png */,
 				B89FC24F1C42B92D001ECB6E /* mbgclan app */,
 				B89FC24E1C42B92D001ECB6E /* Products */,
 			);
@@ -59,9 +71,9 @@
 				B89FC2501C42B92D001ECB6E /* AppDelegate.swift */,
 				B89FC2521C42B92D001ECB6E /* FirstViewController.swift */,
 				B89FC2541C42B92D001ECB6E /* SecondViewController.swift */,
+				B8D8C50E1C5439F70072BB55 /* ThirdViewController.swift */,
 				B89FC2561C42B92D001ECB6E /* Main.storyboard */,
 				B89FC2591C42B92D001ECB6E /* Assets.xcassets */,
-				B89FC25B1C42B92D001ECB6E /* LaunchScreen.storyboard */,
 				B89FC25E1C42B92D001ECB6E /* Info.plist */,
 			);
 			path = "mbgclan app";
@@ -126,9 +138,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B89FC25D1C42B92D001ECB6E /* LaunchScreen.storyboard in Resources */,
+				B8D8C5191C54474D0072BB55 /* pscrossicon.jpg in Resources */,
+				B8D8C51B1C54474D0072BB55 /* pscircleicon.jpg in Resources */,
 				B89FC25A1C42B92D001ECB6E /* Assets.xcassets in Resources */,
+				B89FC2671C42D440001ECB6E /* mbgclan_banner.png in Resources */,
 				B89FC2581C42B92D001ECB6E /* Main.storyboard in Resources */,
+				B8D8C51A1C54474D0072BB55 /* pstriangleicon.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +156,7 @@
 			files = (
 				B89FC2551C42B92D001ECB6E /* SecondViewController.swift in Sources */,
 				B89FC2511C42B92D001ECB6E /* AppDelegate.swift in Sources */,
+				B8D8C50F1C5439F70072BB55 /* ThirdViewController.swift in Sources */,
 				B89FC2531C42B92D001ECB6E /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,14 +170,6 @@
 				B89FC2571C42B92D001ECB6E /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B89FC25B1C42B92D001ECB6E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B89FC25C1C42B92D001ECB6E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -254,10 +262,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "mbgclan app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Becat72.mbgclan-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -265,10 +276,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "mbgclan app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Becat72.mbgclan-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -291,6 +305,7 @@
 				B89FC2631C42B92D001ECB6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
