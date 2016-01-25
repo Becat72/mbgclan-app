@@ -96,7 +96,7 @@ class ThirdViewController: UIViewController, NSXMLParserDelegate {
     
     
     @IBAction func SwipeLeftOnEvents(sender: UISwipeGestureRecognizer) {
-        if eventitemnumber < 20 {
+        if eventitemnumber < 19 {
             eventitemnumber = eventitemnumber + 1
             DisplayEvents()
         }

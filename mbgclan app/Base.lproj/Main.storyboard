@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--MBGClan-->
@@ -18,11 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="mbgclan_banner.png" translatesAutoresizingMaskIntoConstraints="NO" id="uVV-Tn-mKQ">
-                                <rect key="frame" x="0.0" y="28" width="600" height="128"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHc-7F-YUJ">
-                                <rect key="frame" x="0.0" y="191" width="600" height="368"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHc-7F-YUJ">
+                                <rect key="frame" x="20" y="136" width="560" height="407"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -53,22 +49,21 @@ XXHAWKEYEXX83
 Moderator:
 McHCM 
 Timverwijmeren</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MBG-top-icon_100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="tvH-WO-5Xh">
+                                <rect key="frame" x="20" y="28" width="100" height="100"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uVV-Tn-mKQ" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="Y2r-Tp-AoG"/>
-                            <constraint firstItem="DHc-7F-YUJ" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" constant="8" symbolic="YES" id="eLD-rl-dK1"/>
-                            <constraint firstAttribute="width" secondItem="uVV-Tn-mKQ" secondAttribute="width" id="icO-Du-aUl"/>
-                            <constraint firstItem="DHc-7F-YUJ" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="ogN-d3-iU0"/>
-                            <constraint firstItem="DHc-7F-YUJ" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="uAx-x3-4Zj"/>
-                            <constraint firstAttribute="width" secondItem="uVV-Tn-mKQ" secondAttribute="height" multiplier="513:139" id="uCq-j7-MSo"/>
-                            <constraint firstItem="DHc-7F-YUJ" firstAttribute="top" secondItem="uVV-Tn-mKQ" secondAttribute="bottom" id="z6z-0x-7Lg"/>
+                            <constraint firstItem="DHc-7F-YUJ" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="Hfh-Kc-xec"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MBGClan" image="pscrossicon.jpg" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="MBGClan" image="home-icon.png" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,25 +81,25 @@ Timverwijmeren</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="mbgclan_banner.png" translatesAutoresizingMaskIntoConstraints="NO" id="tZd-Z4-KSp">
-                                <rect key="frame" x="0.0" y="28" width="600" height="128"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKn-Uc-b1G" userLabel="TitleLabel">
-                                <rect key="frame" x="20" y="169" width="283" height="21"/>
+                                <rect key="frame" x="20" y="128" width="283" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MCj-wH-c3x" userLabel="DescriptionWebView">
-                                <rect key="frame" x="20" y="216" width="560" height="316"/>
+                                <rect key="frame" x="20" y="186" width="560" height="346"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                             </webView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MBG-top-icon_100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zkx-oE-hlF">
+                                <rect key="frame" x="20" y="20" width="100" height="100"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0QD-ki-HYb" userLabel="pubDateLabel">
-                                <rect key="frame" x="20" y="187" width="283" height="21"/>
+                                <rect key="frame" x="20" y="157" width="283" height="21"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -112,12 +107,9 @@ Timverwijmeren</string>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="MCj-wH-c3x" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="Jv6-sz-ska"/>
-                            <constraint firstItem="tZd-Z4-KSp" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="Llm-Mw-kbX"/>
-                            <constraint firstAttribute="width" secondItem="tZd-Z4-KSp" secondAttribute="width" id="fb4-6c-ZEb"/>
-                            <constraint firstAttribute="width" secondItem="tZd-Z4-KSp" secondAttribute="height" multiplier="513:139" id="oab-Xm-Cnb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Nieuws" image="pscircleicon.jpg" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Nieuws" image="news-icon.png" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="DescriptionWebView" destination="MCj-wH-c3x" id="pRu-M7-2cY"/>
                         <outlet property="TitleLabel" destination="XKn-Uc-b1G" id="Hjb-HY-fUW"/>
@@ -138,10 +130,10 @@ Timverwijmeren</string>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--Third-->
+        <!--Events-->
         <scene sceneID="771-SL-Ao6">
             <objects>
-                <viewController title="Third" id="T14-mK-HeE" customClass="ThirdViewController" customModule="mbgclan_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="T14-mK-HeE" customClass="ThirdViewController" customModule="mbgclan_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aWG-rm-GH7"/>
                         <viewControllerLayoutGuide type="bottom" id="tys-V5-wJR"/>
@@ -150,35 +142,30 @@ Timverwijmeren</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="mbgclan_banner.png" translatesAutoresizingMaskIntoConstraints="NO" id="fnF-Qt-oZe">
-                                <rect key="frame" x="0.0" y="28" width="600" height="128"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsn-55-KSb">
-                                <rect key="frame" x="20" y="193" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j4O-A0-ahy">
-                                <rect key="frame" x="20" y="222" width="560" height="321"/>
+                                <rect key="frame" x="20" y="186" width="560" height="357"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0O7-Ag-HLR">
-                                <rect key="frame" x="20" y="169" width="560" height="21"/>
+                                <rect key="frame" x="20" y="128" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MBG-top-icon_100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vic-Zf-VaU">
+                                <rect key="frame" x="20" y="20" width="100" height="100"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsn-55-KSb">
+                                <rect key="frame" x="20" y="157" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="j4O-A0-ahy" firstAttribute="width" secondItem="f5a-2u-jf5" secondAttribute="width" id="6sR-3b-a3W"/>
-                            <constraint firstItem="fnF-Qt-oZe" firstAttribute="width" secondItem="f5a-2u-jf5" secondAttribute="height" multiplier="513:139" id="FwQ-y5-8De"/>
-                            <constraint firstAttribute="width" secondItem="fnF-Qt-oZe" secondAttribute="width" id="e32-pC-5gm"/>
-                            <constraint firstItem="fnF-Qt-oZe" firstAttribute="top" secondItem="aWG-rm-GH7" secondAttribute="bottom" constant="8" id="veL-4t-6dG"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Events" image="pstriangleicon.jpg" id="gbF-6n-HG4"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="event-icon.png" id="gbF-6n-HG4"/>
                     <connections>
                         <outlet property="DescriptionWebView" destination="j4O-A0-ahy" id="i3i-hh-q7k"/>
                         <outlet property="TitleLabel" destination="0O7-Ag-HLR" id="zdj-iM-Hpf"/>
@@ -211,9 +198,9 @@ Timverwijmeren</string>
         </scene>
     </scenes>
     <resources>
-        <image name="mbgclan_banner.png" width="513" height="139"/>
-        <image name="pscircleicon.jpg" width="30" height="30"/>
-        <image name="pscrossicon.jpg" width="30" height="30"/>
-        <image name="pstriangleicon.jpg" width="30" height="27"/>
+        <image name="MBG-top-icon_100x100.png" width="100" height="100"/>
+        <image name="event-icon.png" width="32" height="32"/>
+        <image name="home-icon.png" width="32" height="32"/>
+        <image name="news-icon.png" width="32" height="32"/>
     </resources>
 </document>

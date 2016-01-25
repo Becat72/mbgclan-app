@@ -97,7 +97,7 @@ class SecondViewController: UIViewController, NSXMLParserDelegate {
     
     
     @IBAction func SwipeLeftOnNews(sender: UISwipeGestureRecognizer) {
-        if newsitemnumber < 20 {
+        if newsitemnumber < 19 {
             newsitemnumber = newsitemnumber + 1
             DisplayNews()
         }
