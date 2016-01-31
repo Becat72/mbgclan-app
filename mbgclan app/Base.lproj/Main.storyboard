@@ -3,12 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--MBGClan-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="mbgclan_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="MBGClanViewController" customModule="mbgclan_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -17,13 +19,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHc-7F-YUJ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHc-7F-YUJ">
                                 <rect key="frame" x="20" y="136" width="560" height="407"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
-                                <string key="text">De MBG Clan is een PS3 vriendenclub voor Minder Bedreven Gamers!
+                                <mutableString key="text">De MBG Clan is een PS3 vriendenclub voor Minder Bedreven Gamers!
 
 Komt dit jou bekend voor?
 Dit klinkt wellicht bekend: je wilt online racen maar je moet het opnemen tegen gamers die al honderden races gereden hebben. Resultaat: de race is al afgelopen voordat jij de finish hebt bereikt.
@@ -34,33 +36,24 @@ Zo ja, dan: Welkom bij de Clan voor Minder Bedreven Gamers!
 
 Voor gamers die met deze problemen kampen hebben we eind 2007 een clan opgericht: de Clan voor Minder Bedreven Gamers. Een vriendenclub vol gamers die niet zo oppermachtig zijn in het gamen of die gewoon te weinig (game)tijd hebben om veel te oefenen, maar gewoon plezier willen hebben met gelijkgestemden. We spelen met de MBG-clan geen clanwars en onze leden hebben dus ook geen verplichtingen.. 
 
-Ons clubje telt inmiddels ruim 600 leden en ons motto is: 
-"Hoe meer MBG-ers online, hoe meer vreugd."
-
-Als je vragen hebt kun je terecht bij onderstaande personen of gebruik maken van ons contact formulier.
-
-Administrators:
-LexSurax
-Janizo
-
-Hoofd Moderator:
-XXHAWKEYEXX83 
-
-Moderator:
-McHCM 
-Timverwijmeren</string>
+Als je vragen hebt kun je terecht op onze website: http://www.mbgclan.nl</mutableString>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MBG-top-icon_100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="tvH-WO-5Xh">
-                                <rect key="frame" x="20" y="28" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MBG-top-icon_100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="tvH-WO-5Xh">
+                                <rect key="frame" x="20" y="20" width="100" height="100"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DHc-7F-YUJ" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="Hfh-Kc-xec"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="DHc-7F-YUJ" secondAttribute="bottom" constant="8" id="2jj-Ud-KdJ"/>
+                            <constraint firstItem="tvH-WO-5Xh" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="3uF-eh-b1i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DHc-7F-YUJ" secondAttribute="trailing" id="Zjw-GQ-UQy"/>
+                            <constraint firstItem="DHc-7F-YUJ" firstAttribute="top" secondItem="tvH-WO-5Xh" secondAttribute="bottom" constant="16" id="bSp-ao-ibf"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="DHc-7F-YUJ" secondAttribute="leading" id="lp0-Nm-h6O"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="tvH-WO-5Xh" secondAttribute="leading" id="prq-qw-eCq"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="MBGClan" image="home-icon.png" id="acW-dT-cKf"/>
@@ -72,7 +65,7 @@ Timverwijmeren</string>
         <!--Nieuws-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="mbgclan_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="NieuwsViewController" customModule="mbgclan_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -81,32 +74,80 @@ Timverwijmeren</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKn-Uc-b1G" userLabel="TitleLabel">
-                                <rect key="frame" x="20" y="128" width="283" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKn-Uc-b1G" userLabel="TitleLabel">
+                                <rect key="frame" x="20" y="128" width="31" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="mX5-lb-lxz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MCj-wH-c3x" userLabel="DescriptionWebView">
-                                <rect key="frame" x="20" y="186" width="560" height="346"/>
+                            <webView contentMode="scaleToFill" paginationBreakingMode="column" translatesAutoresizingMaskIntoConstraints="NO" id="MCj-wH-c3x" userLabel="DescriptionWebView">
+                                <rect key="frame" x="20" y="186" width="560" height="357"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="357" id="dAi-33-nKf"/>
+                                </constraints>
+                                <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MBG-top-icon_100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zkx-oE-hlF">
-                                <rect key="frame" x="20" y="20" width="100" height="100"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0QD-ki-HYb" userLabel="pubDateLabel">
-                                <rect key="frame" x="20" y="157" width="283" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0QD-ki-HYb" userLabel="pubDateLabel">
+                                <rect key="frame" x="20" y="157" width="31" height="21"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="gYK-7y-7q5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MBG-top-icon_100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zkx-oE-hlF">
+                                <rect key="frame" x="20" y="20" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="e5w-u7-Esi"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="down-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="BOK-y9-a1I">
+                                <rect key="frame" x="185" y="67" width="32" height="32"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Refresh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trm-GP-xVk">
+                                <rect key="frame" x="179" y="41" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vorige" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFj-27-vzI">
+                                <rect key="frame" x="128" y="41" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Volgende" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvy-ao-auN">
+                                <rect key="frame" x="233" y="41" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="right-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="i1t-5d-Qpa">
+                                <rect key="frame" x="132" y="67" width="32" height="32"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="left-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="0lO-l0-1Dk">
+                                <rect key="frame" x="245" y="67" width="32" height="32"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="MCj-wH-c3x" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="Jv6-sz-ska"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Zkx-oE-hlF" secondAttribute="leading" id="0Xf-pW-GuX"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="XKn-Uc-b1G" secondAttribute="leading" id="5TU-64-Y3q"/>
+                            <constraint firstItem="0QD-ki-HYb" firstAttribute="top" secondItem="XKn-Uc-b1G" secondAttribute="bottom" constant="8" id="7ua-JV-f55"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="0QD-ki-HYb" secondAttribute="leading" id="EkJ-pX-IJE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MCj-wH-c3x" secondAttribute="trailing" id="HT2-iC-vis"/>
+                            <constraint firstItem="XKn-Uc-b1G" firstAttribute="top" secondItem="Zkx-oE-hlF" secondAttribute="bottom" constant="8" id="QpH-6e-Dhv"/>
+                            <constraint firstItem="MCj-wH-c3x" firstAttribute="top" secondItem="0QD-ki-HYb" secondAttribute="bottom" constant="8" id="REC-8N-0ID"/>
+                            <constraint firstItem="Zkx-oE-hlF" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="keo-aK-Xbq"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="MCj-wH-c3x" secondAttribute="leading" id="vQg-JN-EAx"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Nieuws" image="news-icon.png" id="cPa-gy-q4n"/>
@@ -130,10 +171,92 @@ Timverwijmeren</string>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
+        <!--ShoutBox-->
+        <scene sceneID="vUw-Fe-qB6">
+            <objects>
+                <viewController id="7wL-nU-jsZ" customClass="ShoutboxViewController" customModule="mbgclan_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ngS-t3-gD0"/>
+                        <viewControllerLayoutGuide type="bottom" id="0AP-x7-Ifb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VTL-aA-TZf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwA-Je-nre">
+                                <rect key="frame" x="20" y="128" width="31" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="kXe-mr-DfY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5H-BU-QUf">
+                                <rect key="frame" x="20" y="157" width="560" height="386"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MBG-top-icon_100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="SkG-ra-YfL">
+                                <rect key="frame" x="20" y="20" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="pgB-Fa-865"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="down-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="TAU-uf-My2">
+                                <rect key="frame" x="185" y="67" width="32" height="32"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Refresh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j94-fy-52X">
+                                <rect key="frame" x="179" y="41" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vorige" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2S-mV-Bwf">
+                                <rect key="frame" x="128" y="41" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Volgende" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50E-Oz-ipp">
+                                <rect key="frame" x="233" y="41" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="right-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="sUT-Ay-Yob">
+                                <rect key="frame" x="132" y="67" width="32" height="32"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="left-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="SZ7-w3-7TJ">
+                                <rect key="frame" x="245" y="67" width="32" height="32"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="m5H-BU-QUf" secondAttribute="leading" id="7aX-od-1p6"/>
+                            <constraint firstItem="m5H-BU-QUf" firstAttribute="top" secondItem="ngS-t3-gD0" secondAttribute="bottom" constant="137" id="DDr-5A-pty"/>
+                            <constraint firstItem="0AP-x7-Ifb" firstAttribute="top" secondItem="m5H-BU-QUf" secondAttribute="bottom" constant="8" id="J3S-pd-tjQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m5H-BU-QUf" secondAttribute="trailing" id="RUu-qc-HrZ"/>
+                            <constraint firstItem="zwA-Je-nre" firstAttribute="top" secondItem="SkG-ra-YfL" secondAttribute="bottom" constant="8" id="VPx-nG-ImW"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="zwA-Je-nre" secondAttribute="leading" id="d0e-h6-IAI"/>
+                            <constraint firstItem="m5H-BU-QUf" firstAttribute="top" secondItem="zwA-Je-nre" secondAttribute="bottom" constant="8" id="fzJ-RO-95a"/>
+                            <constraint firstItem="SkG-ra-YfL" firstAttribute="top" secondItem="ngS-t3-gD0" secondAttribute="bottom" id="wRI-Fy-eB5"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="SkG-ra-YfL" secondAttribute="leading" id="wnz-6P-GWq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ShoutBox" image="chat-icon.png" id="cgs-xw-RjE"/>
+                    <connections>
+                        <outlet property="DescriptionWebView" destination="m5H-BU-QUf" id="cts-07-6N2"/>
+                        <outlet property="pubDateLabel" destination="zwA-Je-nre" id="3XM-W3-cl8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcx-yO-d9s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="1716"/>
+        </scene>
         <!--Events-->
         <scene sceneID="771-SL-Ao6">
             <objects>
-                <viewController id="T14-mK-HeE" customClass="ThirdViewController" customModule="mbgclan_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="T14-mK-HeE" customClass="EventsViewController" customModule="mbgclan_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aWG-rm-GH7"/>
                         <viewControllerLayoutGuide type="bottom" id="tys-V5-wJR"/>
@@ -142,27 +265,72 @@ Timverwijmeren</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j4O-A0-ahy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0O7-Ag-HLR">
+                                <rect key="frame" x="20" y="128" width="31" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="th6-Kl-vAx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsn-55-KSb">
+                                <rect key="frame" x="20" y="157" width="31" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6jr-hx-H51"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="j4O-A0-ahy">
                                 <rect key="frame" x="20" y="186" width="560" height="357"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0O7-Ag-HLR">
-                                <rect key="frame" x="20" y="128" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MBG-top-icon_100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vic-Zf-VaU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MBG-top-icon_100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vic-Zf-VaU">
                                 <rect key="frame" x="20" y="20" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="bsz-mN-oaj"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsn-55-KSb">
-                                <rect key="frame" x="20" y="157" width="560" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="down-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="5lp-N5-0fH">
+                                <rect key="frame" x="185" y="67" width="32" height="32"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Refresh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVS-1f-9W7">
+                                <rect key="frame" x="179" y="41" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vorige" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvB-2f-rIo">
+                                <rect key="frame" x="128" y="41" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Volgende" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuH-42-2nJ">
+                                <rect key="frame" x="233" y="41" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="right-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="JXA-U2-kcl">
+                                <rect key="frame" x="132" y="67" width="32" height="32"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="left-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="V7R-8D-pnu">
+                                <rect key="frame" x="245" y="67" width="32" height="32"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="j4O-A0-ahy" firstAttribute="width" secondItem="f5a-2u-jf5" secondAttribute="width" id="6sR-3b-a3W"/>
+                            <constraint firstItem="j4O-A0-ahy" firstAttribute="top" secondItem="zsn-55-KSb" secondAttribute="bottom" constant="8" id="09S-MY-UN2"/>
+                            <constraint firstItem="zsn-55-KSb" firstAttribute="top" secondItem="0O7-Ag-HLR" secondAttribute="bottom" constant="8" id="H7k-zy-VuP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j4O-A0-ahy" secondAttribute="trailing" id="LOY-cj-RmN"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Vic-Zf-VaU" secondAttribute="leading" id="PQr-jA-Yey"/>
+                            <constraint firstItem="tys-V5-wJR" firstAttribute="top" secondItem="j4O-A0-ahy" secondAttribute="bottom" constant="8" id="Rye-Uf-zRx"/>
+                            <constraint firstItem="Vic-Zf-VaU" firstAttribute="top" secondItem="aWG-rm-GH7" secondAttribute="bottom" id="SFF-ro-SPC"/>
+                            <constraint firstItem="0O7-Ag-HLR" firstAttribute="top" secondItem="Vic-Zf-VaU" secondAttribute="bottom" constant="8" id="Xir-hu-rTn"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="j4O-A0-ahy" secondAttribute="leading" id="dES-wO-J5B"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="zsn-55-KSb" secondAttribute="leading" id="dP0-06-P9g"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="0O7-Ag-HLR" secondAttribute="leading" id="ugO-zh-fmq"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Events" image="event-icon.png" id="gbF-6n-HG4"/>
@@ -174,7 +342,7 @@ Timverwijmeren</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9H-yE-d5U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="330" y="1066"/>
+            <point key="canvasLocation" x="750" y="1039"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -190,17 +358,76 @@ Timverwijmeren</string>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="T14-mK-HeE" kind="relationship" relationship="viewControllers" id="qgb-5F-WGV"/>
+                        <segue destination="7wL-nU-jsZ" kind="relationship" relationship="viewControllers" id="oZX-u8-d28"/>
+                        <segue destination="eNe-Aq-7lS" kind="relationship" relationship="viewControllers" id="wPX-tR-yqC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
+        <!--YouTube-->
+        <scene sceneID="4dG-ER-75b">
+            <objects>
+                <viewController id="eNe-Aq-7lS" customClass="YoutubeViewController" customModule="mbgclan_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fSO-gU-YMW"/>
+                        <viewControllerLayoutGuide type="bottom" id="BjQ-FY-s8k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Ku-09-vCf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MBG-top-icon_100x100.png" translatesAutoresizingMaskIntoConstraints="NO" id="rgg-13-Xpt">
+                                <rect key="frame" x="20" y="20" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rgg-13-Xpt" secondAttribute="height" multiplier="1:1" id="Nwj-2s-vIS"/>
+                                </constraints>
+                            </imageView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GA2-az-3DF">
+                                <rect key="frame" x="20" y="128" width="560" height="415"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="down-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="ou3-U4-4DJ">
+                                <rect key="frame" x="185" y="67" width="32" height="32"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Refresh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3b-h3-DgT">
+                                <rect key="frame" x="179" y="41" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="rgg-13-Xpt" secondAttribute="leading" id="4A9-XZ-0bs"/>
+                            <constraint firstItem="BjQ-FY-s8k" firstAttribute="top" secondItem="GA2-az-3DF" secondAttribute="bottom" constant="8" id="HR6-KD-BP5"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="GA2-az-3DF" secondAttribute="leading" id="W74-1u-i9l"/>
+                            <constraint firstItem="rgg-13-Xpt" firstAttribute="top" secondItem="fSO-gU-YMW" secondAttribute="bottom" id="ctf-kL-FI1"/>
+                            <constraint firstItem="GA2-az-3DF" firstAttribute="top" secondItem="rgg-13-Xpt" secondAttribute="bottom" constant="8" id="l1b-7i-woy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GA2-az-3DF" secondAttribute="trailing" id="qwX-gK-MhF"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="YouTube" image="play-icon.png" id="2ju-WB-8tn"/>
+                    <connections>
+                        <outlet property="YoutubeWebView" destination="GA2-az-3DF" id="3rr-DN-7Wv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzs-6D-Ws4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="2407"/>
+        </scene>
     </scenes>
     <resources>
         <image name="MBG-top-icon_100x100.png" width="100" height="100"/>
+        <image name="chat-icon.png" width="32" height="32"/>
+        <image name="down-icon.png" width="32" height="32"/>
         <image name="event-icon.png" width="32" height="32"/>
         <image name="home-icon.png" width="32" height="32"/>
+        <image name="left-icon.png" width="32" height="32"/>
         <image name="news-icon.png" width="32" height="32"/>
+        <image name="play-icon.png" width="32" height="32"/>
+        <image name="right-icon.png" width="32" height="32"/>
     </resources>
 </document>

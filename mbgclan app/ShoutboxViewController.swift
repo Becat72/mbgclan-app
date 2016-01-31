@@ -1,27 +1,26 @@
 //
-//  ThirdViewController.swift
+//  ShoutboxViewController.swift
 //  mbgclan app
 //
-//  Created by Bert Ten Cate on 23-01-16.
+//  Created by Bert Ten Cate on 30-01-16.
 //  Copyright © 2016 Bert Ten Cate. All rights reserved.
 //
 
 import UIKit
 import Foundation
 
-class ThirdViewController: UIViewController, NSXMLParserDelegate {
-
+class ShoutboxViewController: UIViewController, NSXMLParserDelegate {
+    
     var arrParsedData = [Dictionary<String, String>]()
     var currentDataDictionary = Dictionary<String, String>()
     var currentElement = ""
     var foundCharacters = ""
-    var url: NSURL!
-    var eventitemnumber: Int = 0
-    @IBOutlet weak var TitleLabel: UILabel!
+    var url: NSURL! = NSURL(string: "http://www.mbgclan.nl/shouts/index.rss")
+    var shoutboxitemnumber: Int = 0
     @IBOutlet weak var pubDateLabel: UILabel!
     @IBOutlet weak var DescriptionWebView: UIWebView!
     
-
+    
     func startParsingWithContentsOfURL(url: NSURL) {
         let parser = NSXMLParser(contentsOfURL: url)
         parser?.delegate = self
@@ -59,47 +58,56 @@ class ThirdViewController: UIViewController, NSXMLParserDelegate {
     
     func parser(parser: NSXMLParser, validationErrorOccurred validationError: NSError) {
         print(validationError.description)
-}
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        var swipeRightOnEvents  = UISwipeGestureRecognizer(target: self, action: "SwipeRightOnEvents:")
-        swipeRightOnEvents.direction = UISwipeGestureRecognizerDirection.Right
-        self.view.addGestureRecognizer(swipeRightOnEvents)
-        
-        var swipeLeftOnEvents = UISwipeGestureRecognizer(target: self, action: "SwipeLeftOnEvents:")
-        swipeLeftOnEvents.direction = UISwipeGestureRecognizerDirection.Left
-        self.view.addGestureRecognizer(swipeLeftOnEvents)
-        
-        url = NSURL(string: "http://www.mbgclan.nl/events/index.rss")
-        startParsingWithContentsOfURL(url)
-        DisplayEvents()
     }
     
     
-    func DisplayEvents() {
-        currentDataDictionary = arrParsedData[eventitemnumber]
-        TitleLabel.text = currentDataDictionary["title"]
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let swipeRightOnShoutbox  = UISwipeGestureRecognizer(target: self, action: "SwipeRightOnShoutbox:")
+        swipeRightOnShoutbox.direction = UISwipeGestureRecognizerDirection.Right
+        self.view.addGestureRecognizer(swipeRightOnShoutbox)
+        
+        let swipeLeftOnShoutbox = UISwipeGestureRecognizer(target: self, action: "SwipeLeftOnShoutbox:")
+        swipeLeftOnShoutbox.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(swipeLeftOnShoutbox)
+        
+        let swipeDownOnShoutbox = UISwipeGestureRecognizer(target: self, action: "SwipeDownOnShoutbox:")
+        swipeDownOnShoutbox.direction = UISwipeGestureRecognizerDirection.Down
+        self.view.addGestureRecognizer(swipeDownOnShoutbox)
+        
+        startParsingWithContentsOfURL(url)
+        DisplayShoutbox()
+    }
+    
+    
+    func DisplayShoutbox() {
+        currentDataDictionary = arrParsedData[shoutboxitemnumber]
         pubDateLabel.text = currentDataDictionary["pubDate"]
         DescriptionWebView.loadHTMLString(currentDataDictionary["description"]!, baseURL: nil)
     }
     
     
-    @IBAction func SwipeRightOnEvents(sender: UISwipeGestureRecognizer) {
-        if eventitemnumber > 0 {
-            eventitemnumber = eventitemnumber - 1
-            DisplayEvents()
+    @IBAction func SwipeRightOnShoutbox(sender: UISwipeGestureRecognizer) {
+        if shoutboxitemnumber > 0 {
+            shoutboxitemnumber = shoutboxitemnumber - 1
+            DisplayShoutbox()
         }
     }
     
     
-    
-    @IBAction func SwipeLeftOnEvents(sender: UISwipeGestureRecognizer) {
-        if eventitemnumber < 19 {
-            eventitemnumber = eventitemnumber + 1
-            DisplayEvents()
+    @IBAction func SwipeLeftOnShoutbox(sender: UISwipeGestureRecognizer) {
+        if shoutboxitemnumber < 19 {
+            shoutboxitemnumber = shoutboxitemnumber + 1
+            DisplayShoutbox()
         }
+    }
+    
+    
+    @IBAction func SwipeDownOnShoutbox(sender: UISwipeGestureRecognizer) {
+        shoutboxitemnumber = 0
+        startParsingWithContentsOfURL(url)
+        DisplayShoutbox()
     }
     
     

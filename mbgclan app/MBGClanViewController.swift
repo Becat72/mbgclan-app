@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class MBGClanViewController: UIViewController {
 
     
     override func viewDidLoad() {
